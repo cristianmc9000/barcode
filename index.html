@@ -1,43 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="ES">
 <head>
-<link rel="stylesheet" href="style.css" />
-<script type="text/javascript" src="jquery.js"></script>
-<script type="text/javascript" src="barcode.js"></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="#673ab7">
+	<meta name="MobileOptimized" content="width">
+	<meta name="HandheldFriendly" content="true">
+	<!-- <link rel="icon" type="image/x-icon" href="img/iconobioesencia.ico">
+	<link rel="manifest" href="./manifest.json"> esto es para aplicación móvil--> 
+	<link rel="stylesheet" href="css/style.css" />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+	<script type="text/javascript" src="js/materialize.min.js"></script>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/barcode.js"></script>
+	<script type="text/javascript" src="js/quagga.min.js"></script>
 
-<script type="text/javascript">
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
 
-var sound = new Audio("barcode.wav");
-
-$(document).ready(function() {
-
-	barcode.config.start = 0.1;
-	barcode.config.end = 0.9;
-	barcode.config.video = '#barcodevideo';
-	barcode.config.canvas = '#barcodecanvas';
-	barcode.config.canvasg = '#barcodecanvasg';
-	barcode.setHandler(function(barcode) {
-		$('#result').html(barcode);
-	});
-	barcode.init();
-
-	$('#result').bind('DOMSubtreeModified', function(e) {
-		sound.play();	
-	});
-
-});
-
-</script>
+	<title>Barcode Scanner</title>
 
 </head>
+<style>
+
+</style>
 <body>
 
-<div id="barcode">
-	<video id="barcodevideo" autoplay></video>
-	<canvas id="barcodecanvasg" ></canvas>
+<!-- <a href="#" id="btn-scan" class="waves-effect waves-light btn">Escanear código</a> -->
+<!-- <div id="result"></div> -->
+<div class="row" id="cuerpo">
+	<!-- <div id="scan-section" class="row"> -->
+		<div id="camera" class="col s12 m6 offset-m3">
+			<!-- <div id="camera"></div> -->
+			<!-- <div id="barcode"> -->
+				<!-- <video id="barcodevideo" autoplay></video> -->
+				<!-- <canvas id="barcodecanvasg" ></canvas> -->
+			<!-- </div> -->
+			<!-- <canvas id="barcodecanvas" ></canvas> -->
+			<!-- <div id="result"></div> -->
+		</div>
+	<!-- </div> -->
 </div>
-<canvas id="barcodecanvas" ></canvas>
-<div id="result"></div>
 
 </body>
+<!-- <script type="text/javascript" src="js/reader.js"></script> -->
+<script type="text/javascript" src="js/reader-quagga.js"></script>
+<script>
+	$(document).ready(function(){
+		// $('cuerpo').load('reader.html');
+	})
+</script>
 </html>

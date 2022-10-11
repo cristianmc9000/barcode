@@ -1,0 +1,48 @@
+/* #barcodevideo, #barcodecanvas, #barcodecanvasg {
+	width: 100%;
+}	
+#scan-section{
+	padding-top: 30px;
+}
+#barcodecanvasg {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+#result {
+	font-family: verdana;
+	font-size: 1.5em;
+}
+
+#barcode {
+	position: relative;
+}	
+
+#barcodecanvas {
+	display: none;
+} */
+video{
+	position: absolute;
+	width: 50%;
+	/* max-width: 100%; */
+}
+canvas{
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+@media (max-width: 600px) {
+	#camera{
+	/* height: 100%; */
+	/* width: 100% !important; */
+	}
+	video{
+		position: absolute;
+		width:95%;
+	}
+	canvas{
+		position: relative;
+		width: 100%;
+	}
+}
